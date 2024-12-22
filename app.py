@@ -20,7 +20,7 @@ def leaderboard():
     for index, _ in enumerate(items):
         del items[index]["_id"]
 
-    return sorted(items, key=lambda x: x["credits"]) # can reverse sort by adding reverse=True at back
+    return sorted(items, key=lambda x: x["credits"], reverse=True) # can reverse sort by adding reverse=True at back
 
 @app.route('/add', methods=["POST"])
 def add():
